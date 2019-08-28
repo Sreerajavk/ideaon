@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="/static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="/static/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="/static/css/Pretty-Footer.css">
+    <link rel="stylesheet" href="/static/css/smoothproducts.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/Team-with-rotating-cards.css">
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">IDEAON</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#about-us">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="clean-block clean-info dark">
+            <section class="card-section-imagia">
+                <div class="container">
+                    <div class="row" id="row">
+                            <div class="card-container-imagia">
+                                <div class="showbox" id="google_loader">
+                                    <div class="loader">
+                                        <svg class="circular" viewBox="25 25 50 50">
+                                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2"
+                                                    stroke-miterlimit="10"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+            <footer id="contact-us">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 footer-navigation">
+                        <h3><a href="#">IDEA<span>TOR </span></a></h3>
+                        <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+
+                    </div>
+                    <div class="col-sm-6 col-md-4 footer-contacts">
+                        <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                            <p><span class="new-line-span">21 Revolution Street</span> Paris, France</p>
+                        </div>
+                        <div><i class="fa fa-phone footer-contacts-icon"></i>
+                            <p class="footer-center-info email text-left"> +1 555 123456</p>
+                        </div>
+                        <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                            <p> <a href="#" target="_blank">support@company.com</a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-4 footer-about">
+                        <h4>About the company</h4>
+                        <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet. </p>
+                        <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+                    </div>
+                </div>
+            </footer>
+    </main>
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="/static/js/smoothproducts.min.js"></script>
+    <script src="/static/js/theme.js"></script>
+</body>
+
+</html>
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        {#alert('sree')#}
+
+        setTimeout( ()=>{
+
+            $.ajax({
+            url: '/home/',
+            type: 'POST',
+            success: function (response) {
+
+                console.log(response.data);
+                html = "";
+
+                if(response.data.length>0) {
+
+                    for (details of response.data) {
+
+
+                        {#html += ` <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="margin-top:1.5em;">` +#}
+                        {##}
+                        {#    ` <div class="card"><img class="card-img-top"  id="avatar" src="${details.imageurl}"alt="Card image cap">` +#}
+                        {#    ` <div class="card-body"> <h4 class="card-title" style="font-size: 3em;text-align: center"><a>${details.name}</a></h4> ` +#}
+                        {#    `<p class="card-text" style="font-size: 20px">Area :${details.area} </p>` +#}
+                        {#    `<a href="mailto:${details.email}?&bcc=sreerajavk123@gmail.com&subject=${details.subject}" class="btn btn-primary" style="font-size: 15px;"> <i class="fa fa-share"></i>mail me!!</a> ` +#}
+                        {#    ` </div> </div></div>`#}
+
+
+                        html += `<div class="col-sm-6 col-md-4"><div class="card-container-imagia"><div class="card-imagia"><div class="front-imagia"><div class="cover-imagia cover-gradient"></div>` +
+                            `<div class="user-imagia"><img class="img-circle" alt="" src="${details.imageurl}"></div>` +
+                            `<div class="content-imagia"><h3 class="name-imagia">${details.name}</h3>` +
+                            `<p class="text-center"><em>${details.area}</em></p></div><div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div></div>` +
+                            `<div class="back-imagia"><div class="content-imagia content-back-imagia"><div>` +
+                            `<h3 class="text-center"></h3><p class="text-center">${details.content}</p></div></div>` +
+                            `<div class="footer-imagia"><div class="social-imagia text-center"><a href="${details.instagram}"><i class="fa fa-instagram"></i></a><a href="${details.linkedin}"><i class="fa fa-linkedin"></i></a> ` + `
+                                            <a href="mailto:${details.email}?&bcc=sreerajavk123@gmail.com&subject=${details.subject}"><i class="icon ion-android-mail"></i></a></div></div></div></div></div></div>`
+                    }
+                }
+
+                else{
+                    html = '<h1>No contents'
+                }
+
+
+                $('#row').html(html);
+
+            },
+            fail: function () {
+
+            }
+        })
+
+        }, 1000)
+
+    })
+
+
+</script>
+
+
+
+
+
+<style>
+    .loader {
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+    }
+
+    .loader:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    .circular {
+        -webkit-animation: rotate 2s linear infinite;
+        animation: rotate 2s linear infinite;
+        height: 100%;
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .path {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+        animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+        stroke-linecap: round;
+    }
+
+    @-webkit-keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes dash {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+        }
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -35px;
+        }
+        100% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -124px;
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+        }
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -35px;
+        }
+        100% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -124px;
+        }
+    }
+
+    @-webkit-keyframes color {
+        100%,
+        0% {
+            stroke: #d62d20;
+        }
+        40% {
+            stroke: #0057e7;
+        }
+        66% {
+            stroke: #008744;
+        }
+        80%,
+        90% {
+            stroke: #ffa700;
+        }
+    }
+
+    @keyframes color {
+        100%,
+        0% {
+            stroke: #d62d20;
+        }
+        40% {
+            stroke: #0057e7;
+        }
+        66% {
+            stroke: #008744;
+        }
+        80%,
+        90% {
+            stroke: #ffa700;
+        }
+    }
+
+    .showbox{
+        flex : 1;
+        justify-content: center;
+        margin-top: 10em;
+
+    }
+
+</style>
